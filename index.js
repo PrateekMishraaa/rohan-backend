@@ -19,7 +19,7 @@ mongoose.connect(MongoDb)
   .then(() => console.log("DB connected"))
   .catch((err) => console.error("DB connection error:", err));
 
-app.post("/", (req, res) => {
+app.get("/", (req, res) => {
   console.log("hello prateek");
   res.send("hii prateek how are you?");
 });
