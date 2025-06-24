@@ -10,9 +10,10 @@ import cors from "cors";
 
 const MongoDb = process.env.MONGOURI; // ✅ Corrected
 console.log(MongoDb);
-
+import Contact from "./routes/Contact.js"
 app.use(cors());
 app.use(express.json());
+app.use("/api",Contact)
 app.use("/api",User)
 
 mongoose.connect(MongoDb)
